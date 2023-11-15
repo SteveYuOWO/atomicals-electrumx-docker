@@ -50,7 +50,6 @@ Then run the ElectrumX server:
 ```bash
 docker-compose pull && docker-compose up -d
 ```
-
 - use `docker-compose logs -f` to check the logs.
 - use `docker-compose down` to stop the server.
 
@@ -58,4 +57,7 @@ docker-compose pull && docker-compose up -d
 
 - You should stop here until the server is fully synced.
 - The `data` directory will be more than **90G** after sync.
-
+- Testing RPC
+```
+url --user name:pwd --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://localhost:8332/
+```
