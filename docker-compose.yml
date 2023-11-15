@@ -9,7 +9,7 @@ services:
       - 50004:50004
       - 8000:8000
     volumes:
-      - ./data:/data
+      - /Volumes/WD_Steve/Shares/atomicals-electrumx-data:/data
     environment:
       - DAEMON_URL=${DAEMON_URL:?}
       - COIN=BitCoin
